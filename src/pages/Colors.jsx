@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import { Palette, Check, Droplets, Sun, Moon, Zap, Layout } from 'lucide-react';
@@ -84,8 +85,8 @@ const Colors = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
                         className={`cursor-pointer group relative overflow-hidden rounded-3xl border transition-all duration-300 ${currentTheme === theme.id
-                                ? 'border-primary ring-2 ring-primary/20 bg-surface shadow-2xl scale-[1.02]'
-                                : 'border-white/10 bg-surface/50 hover:border-white/30 hover:bg-surface'
+                            ? 'border-primary ring-2 ring-primary/20 bg-surface shadow-2xl scale-[1.02]'
+                            : 'border-white/10 bg-surface/50 hover:border-white/30 hover:bg-surface'
                             }`}
                         onClick={() => setCurrentTheme(theme.id)}
                     >
@@ -129,9 +130,9 @@ const Colors = () => {
                         </div>
 
                         <div className={`h-1.5 w-full bg-gradient-to-r ${theme.id === 'theme-default' ? 'from-[#6C63FF] to-[#2A2D3E]' :
-                                theme.id === 'theme-sunset' ? 'from-[#FF6B6B] to-[#4ECDC4]' :
-                                    theme.id === 'theme-minimal' ? 'from-black to-gray-200' :
-                                        'from-[#00E5FF] to-purple-600'
+                            theme.id === 'theme-sunset' ? 'from-[#FF6B6B] to-[#4ECDC4]' :
+                                theme.id === 'theme-minimal' ? 'from-black to-gray-200' :
+                                    'from-[#00E5FF] to-purple-600'
                             }`} />
                     </motion.div>
                 ))}

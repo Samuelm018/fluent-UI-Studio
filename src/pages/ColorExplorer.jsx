@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { Pipette, Download, RefreshCcw, Layers, Zap } from 'lucide-react';
 
 const ColorExplorer = () => {
