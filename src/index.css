@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default Theme: Modern Premium (Blue-Purple) */
+    --color-primary: #6C63FF;
+    --color-secondary: #9D4EDD;
+    --color-accent: #00C6FB;
+    --color-background: #F7F7F9;
+    --color-surface: rgba(255, 255, 255, 0.7);
+    --color-text-main: #1A1A2E;
+    --color-text-muted: #4A4A6A;
+    --gradient-main: linear-gradient(135deg, #6C63FF 0%, #9D4EDD 100%);
+  }
+
+  .theme-sunset {
+    /* Sunset Vibrant (Orange-Pink) */
+    --color-primary: #FF6B6B;
+    --color-secondary: #FF9F1C;
+    --color-accent: #FF477E;
+    --color-background: #FFF8F0;
+    --color-surface: rgba(255, 248, 240, 0.8);
+    --color-text-main: #2F2F2F;
+    --color-text-muted: #5F5F5F;
+    --gradient-main: linear-gradient(120deg, #FF9F1C, #FF477E);
+  }
+
+  .theme-minimal {
+    /* Minimal White + Cyan */
+    --color-primary: #00A6FB;
+    --color-secondary: #0582CA;
+    --color-accent: #EDF6F9;
+    --color-background: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-text-main: #0A1128;
+    --color-text-muted: #5C677D;
+    --gradient-main: none;
+    /* Clean look */
+  }
+
+  .theme-neon {
+    /* Dark Neon */
+    --color-primary: #4F46E5;
+    --color-secondary: #4338CA;
+    --color-accent: #00E5FF;
+    --color-background: #0D0D12;
+    --color-surface: rgba(255, 255, 255, 0.05);
+    --color-text-main: #EDEDED;
+    --color-text-muted: #A0A0A0;
+    --gradient-main: linear-gradient(135deg, #4F46E5 0%, #00E5FF 100%);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-md bg-surface border border-white/20 shadow-glass rounded-2xl;
+  }
+
+  .glass-button {
+    @apply backdrop-blur-sm bg-white/20 border border-white/30 hover:bg-white/30 transition-all duration-300 rounded-xl px-6 py-2 text-text-main active:scale-95;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white rounded-xl px-6 py-2 hover:opacity-90 transition-all duration-300 shadow-lg active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-main text-white rounded-xl px-6 py-2 hover:opacity-90 transition-all duration-300 shadow-lg active:scale-95;
+  }
+}
+
+body {
+  @apply bg-background text-text-main font-sans transition-colors duration-500 overflow-x-hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full transition-colors;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
